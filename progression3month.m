@@ -26,6 +26,7 @@ scores = scoresChi(idxChi);
 FeaRank = cell2table(varNames(idxChi)');
 FeaRank.scores = scores';
 % writetable(FeaRank,'featureRanking_ICI_Chemo.xlsx')
+
 %% fit a logistic regression model
 rng('default')
 tempLR = cell(length(idxChi),2);
