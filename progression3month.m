@@ -2,7 +2,7 @@ clearvars
 clc
 
 tbl = readtable('Data_reduced_PDL1_NA_removed_ICI_Chemo.xlsx');
-data = removevars(tbl,{'S_N','Row_names','Single_Combine','Line_of_IO_conden','PFS','PFS_Status','OS','OS_Status'});
+data = removevars(tbl,{'S_N','patient_id','Single_Combine','Line_of_IO_conden','PFS','PFS_Status','OS','OS_Status'});
 for i = 1:width(data)
     if nnz(table2array(data(:,i)))<4
         discard{i} = i;
