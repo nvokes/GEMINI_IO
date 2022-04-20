@@ -101,7 +101,7 @@ ylabel('AUC');
 title('AUC Curves for LR, SVM, RF, and GAM')
 hold off
 
-%% plot ROC curves
+%% plot ROC curves for best models
 [bestAUCLR,Ilr] = max(AUCLog);
 [bestAUCSVM,Isv] = max(AUCSVM);
 [bestAUCRF,Irf] = max(AUCRF);
